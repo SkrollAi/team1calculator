@@ -1,0 +1,14 @@
+def calculator(expression):
+    x = eval(expression)
+    print(x)
+def simple_calc():
+    calc_is_on = True 
+    while calc_is_on:
+        expression = input("enter the operation you want to perform : ")
+        if expression == "stop":
+            calc_is_on = False
+        else:
+            calc_is_on = True 
+            calculator(expression)
+            simple_calc()
+simple_calc()
